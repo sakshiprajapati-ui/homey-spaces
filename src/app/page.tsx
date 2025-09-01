@@ -1,14 +1,21 @@
 // src/app/page.tsx
 import HeroSlider from "@/components/custom/heroslider/heroslider";
 import ApartmentsSection from "@/components/custom/apartmentsection/ApartmentsSection";
-import AmenitiesSelector from "@/components/custom/amenitiesselector/amenitiesselector";
+
+import  Safetysecurity from "@/components/custom/safetysecurity/safetysecurity";
+import  Theaming from "@/components/custom/theaming/theaming";
+import  Amenities1 from "@/components/custom/amenities1/amenities1";
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-gray-50">
       {/* ✅ Hero Slider */}
       <HeroSlider />
       <ApartmentsSection />
-      <AmenitiesSelector/>
+      <Safetysecurity/>
+      
+      <Theaming/>
+      <Amenities1/>
       
 
       {/* ✅ Example content */}

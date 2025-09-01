@@ -1,118 +1,195 @@
-"use client"
-
+"use client";
 
 import { motion } from "framer-motion";
-import { Home, Shield, Users } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Users, Building2, Home, Sparkles, Linkedin, Twitter } from "lucide-react";
 
+export default function AboutPage() {
+  const team = [
+    {
+      name: "Aarav Sharma",
+      role: "Founder & CEO",
+      img: "/images/aarav.jpg",
+      linkedin: "#",
+      twitter: "#",
+    },
+    {
+      name: "Priya Mehta",
+      role: "Operations Head",
+      img: "/images/priya.png",
+      linkedin: "#",
+      twitter: "#",
+    },
+    {
+      name: "Rahul Iyer",
+      role: "Tech Lead",
+      img: "/images/rahul.jpg",
+      linkedin: "#",
+      twitter: "#",
+    },
+    {
+      name: "Sneha Kapoor",
+      role: "Community Manager",
+      img: "/images/sneha.jpg",
+      linkedin: "#",
+      twitter: "#",
+    },
+  ];
 
-
-export default function About() {
   return (
-    <div className="bg-white text-gray-800">
-      {/* Hero Section */}
-      <section className="max-w-7xl mx-auto px-10 py-30 text-center">
-        <motion.h1
-          initial={{ opacity: 0, y: -30 }}
+    <div className="relative min-h-[100dvh] bg-gradient-to-b from-white to-slate-50 text-slate-800">
+      <section className="mx-auto max-w-6xl px-4 py-16 sm:py-24">
+        {/* Hero Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-4xl md:text-6xl font-bold mb-6 text-gray-900"
+          className="text-center"
         >
-          About <span className="text-blue-600">Housey Spaces</span>
-        </motion.h1>
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3, duration: 0.8 }}
-          className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto"
-        >
-          We help you find your dream rental home with ease. From modern apartments
-          to cozy family houses, Housey Spaces connects you with trusted listings
-          and makes renting stress-free.
-        </motion.p>
-      </section>
+          <h1 className="text-3xl font-bold tracking-tight text-blue-600 sm:text-5xl">
+            About <span className="text-sky-500">Housey Spaces</span>
+          </h1>
+          <p className="mx-auto mt-4 max-w-2xl text-base text-slate-600 sm:text-lg">
+            We help you find <span className="font-semibold">PGs</span>,{" "}
+            <span className="font-semibold">Apartments</span>, and{" "}
+            <span className="font-semibold">Hostels</span> that suit your
+            lifestyle, budget, and comfort.
+          </p>
+        </motion.div>
 
-      {/* Mission Section */}
-      <section className="bg-gray-50 py-16 px-6">
-        <div className="max-w-5xl mx-auto text-center">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+        {/* Mission Section */}
+        <div className="mt-16 grid gap-8 md:grid-cols-2">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-3xl md:text-4xl font-semibold mb-6"
+            transition={{ duration: 0.5 }}
+            className="space-y-4"
           >
-            Our Mission
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-lg text-gray-600 max-w-3xl mx-auto"
+            <h2 className="text-2xl font-semibold text-slate-800">
+              Our Mission
+            </h2>
+            <p className="text-slate-600 leading-relaxed">
+              At Housey Spaces, our goal is simple — to make house-hunting
+              stress-free. We connect tenants with verified rental spaces and
+              provide landlords a platform to reach genuine tenants. Whether
+              you’re a student, a working professional, or a family, we’ve got
+              you covered.
+            </p>
+            <Button className="bg-gradient-to-r from-blue-600 to-sky-500 text-white shadow-md hover:opacity-90">
+              Explore Listings
+            </Button>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="relative"
           >
-            At Housey Spaces, our mission is simple: to provide people with a safe,
-            reliable, and convenient way to find rental homes. We believe everyone
-            deserves a space that feels like home.
-          </motion.p>
+            <img
+              src="/images/logo.png"
+              alt="About Housey Spaces"
+              className="mx-auto w-full max-w-md"
+            />
+            <Sparkles className="absolute right-8 top-8 h-8 w-8 text-yellow-400 animate-pulse" />
+          </motion.div>
         </div>
-      </section>
 
-      {/* Values Section */}
-      <section className="max-w-7xl mx-auto py-20 px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
-        <motion.div
-          whileHover={{ scale: 1.05 }}
-          className="bg-white shadow-lg rounded-2xl p-6 text-center"
-        >
-          <Home className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-          <h3 className="text-xl font-semibold mb-2">Comfortable Homes</h3>
-          <p className="text-gray-600 text-sm">
-            We list homes that meet modern living standards, ensuring you always
-            feel comfortable and at ease.
-          </p>
-        </motion.div>
+        {/* Values Section */}
+        <div className="mt-24">
+          <h2 className="mb-10 text-center text-2xl font-semibold text-slate-800 sm:text-3xl">
+            Why Choose Us?
+          </h2>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <motion.div whileHover={{ scale: 1.05 }} className="transition">
+              <Card className="shadow-md">
+                <CardContent className="flex flex-col items-center gap-3 p-6 text-center">
+                  <Users className="h-10 w-10 text-blue-600" />
+                  <h3 className="font-medium text-slate-800">Community First</h3>
+                  <p className="text-sm text-slate-600">
+                    We connect like-minded people, making your living
+                    experience more social and comfortable.
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
 
-        <motion.div
-          whileHover={{ scale: 1.05 }}
-          className="bg-white shadow-lg rounded-2xl p-6 text-center"
-        >
-          <Shield className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-          <h3 className="text-xl font-semibold mb-2">Trusted Listings</h3>
-          <p className="text-gray-600 text-sm">
-            Every property is verified to give you peace of mind when searching
-            for your next rental.
-          </p>
-        </motion.div>
+            <motion.div whileHover={{ scale: 1.05 }} className="transition">
+              <Card className="shadow-md">
+                <CardContent className="flex flex-col items-center gap-3 p-6 text-center">
+                  <Building2 className="h-10 w-10 text-blue-600" />
+                  <h3 className="font-medium text-slate-800">Verified Listings</h3>
+                  <p className="text-sm text-slate-600">
+                    Say goodbye to fake listings. We ensure every property is
+                    checked and verified.
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
 
-        <motion.div
-          whileHover={{ scale: 1.05 }}
-          className="bg-white shadow-lg rounded-2xl p-6 text-center"
-        >
-          <Users className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-          <h3 className="text-xl font-semibold mb-2">Community First</h3>
-          <p className="text-gray-600 text-sm">
-            We value people above all. Our platform fosters connections between
-            renters, owners, and neighborhoods.
-          </p>
-        </motion.div>
-      </section>
+            <motion.div whileHover={{ scale: 1.05 }} className="transition">
+              <Card className="shadow-md">
+                <CardContent className="flex flex-col items-center gap-3 p-6 text-center">
+                  <Home className="h-10 w-10 text-blue-600" />
+                  <h3 className="font-medium text-slate-800">Flexible Options</h3>
+                  <p className="text-sm text-slate-600">
+                    From short stays to long-term rentals, we provide housing
+                    solutions that match your needs.
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </div>
+        </div>
 
-      {/* Call To Action */}
-      <section className="bg-blue-600 text-white py-16 px-6 text-center">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-3xl md:text-4xl font-bold mb-6"
-        >
-          Ready to find your new home?
-        </motion.h2>
-        <motion.a
-          whileHover={{ scale: 1.1 }}
-          href="/rentals"
-          className="inline-block bg-white text-blue-600 font-semibold px-6 py-3 rounded-xl shadow-md hover:bg-gray-100"
-        >
-          Browse Rentals
-        </motion.a>
+        {/* Team Section */}
+        <div className="mt-24">
+          <h2 className="mb-10 text-center text-2xl font-semibold text-slate-800 sm:text-3xl">
+            Meet Our Team
+          </h2>
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            {team.map((member, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: idx * 0.1 }}
+              >
+                <Card className="overflow-hidden shadow-md hover:shadow-lg transition">
+                  <img
+                    src={member.img}
+                    alt={member.name}
+                    className="h-48 w-full object-cover"
+                  />
+                  <CardContent className="p-4 text-center">
+                    <h3 className="text-lg font-medium text-slate-800">
+                      {member.name}
+                    </h3>
+                    <p className="text-sm text-slate-500">{member.role}</p>
+                    <div className="mt-3 flex justify-center gap-3">
+                      <a
+                        href={member.linkedin}
+                        className="text-slate-400 hover:text-blue-600"
+                      >
+                        <Linkedin className="h-5 w-5" />
+                      </a>
+                      <a
+                        href={member.twitter}
+                        className="text-slate-400 hover:text-sky-500"
+                      >
+                        <Twitter className="h-5 w-5" />
+                      </a>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
       </section>
     </div>
   );
