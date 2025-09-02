@@ -82,7 +82,7 @@ const categories = [
 // 🔹 Component
 export default function AmenitiesPage() {
   return (
-    <div className="relative px-6 py-16 text-white">
+    <div className="relative px-6 py-16 text-white bg-red-800">
       <ShimmerBG />
 
       <div className="max-w-6xl mx-auto text-center">
