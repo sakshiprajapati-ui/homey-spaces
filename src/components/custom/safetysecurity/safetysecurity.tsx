@@ -181,15 +181,18 @@ export default function SafetySecuritySection({ variant = "default" }: { variant
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="relative h-56 w-full overflow-hidden rounded-xl border">
-              <Image
-                src="/placeholder-map.png"
-                alt="Neighborhood safety map"
-                fill
-                className="object-cover"
-                priority
-              />
-            </div>
+             <div className="relative h-56 w-full overflow-hidden rounded-xl border">
+                 <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.1234567!2d77.5946!3d12.9716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670f1b7c3%3A0x1234567890abcdef!2sBengaluru%2C%20India!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                     width="100%"
+                          height="100%"
+                           style={{ border: 0 }}
+                             allowFullScreen={true}
+                              loading="lazy"
+                                 referrerPolicy="no-referrer-when-downgrade"
+  />
+             </div>
+
             <p className="mt-3 text-sm text-muted-foreground">
               Explore commute options, lighting, and crowd density. We score areas from 1–100 based on public data & community feedback.
             </p>

@@ -6,7 +6,6 @@ import { useState } from "react";
 import Image from "next/image";
 
 
-
 export default function Header() {
   const [open, setOpen] = useState(false);
 
@@ -39,8 +38,6 @@ export default function Header() {
     className="scale-125"
   />
 
- 
-  
 </motion.a>
 
 

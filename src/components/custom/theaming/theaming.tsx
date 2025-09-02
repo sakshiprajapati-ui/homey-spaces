@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Home, Building2, Hotel, Sun, Moon } from "lucide-react";
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
+import Image from "next/image";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
 const variants = [
@@ -15,6 +16,7 @@ const variants = [
     icon: <Home className="w-10 h-10 text-indigo-600" />,
     color: "from-indigo-100 to-indigo-50",
     category: "Budget",
+    
   },
   {
     title: "Hostel Rooms",
@@ -29,6 +31,14 @@ const variants = [
     icon: <Hotel className="w-10 h-10 text-orange-600" />,
     color: "from-orange-100 to-orange-50",
     category: "Premium",
+  },
+    {
+    title: "House",
+    description: "Contemporary rental perfect for short or long stays.”",
+    icon: <Hotel className="w-10 h-10 text-orange-600" />,
+    color: "from-orange-100 to-orange-50",
+    category: "Premium",
+    
   },
 ];
 

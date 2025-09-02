@@ -57,7 +57,7 @@ export default function ListingsPage() {
   const sections = ["PG Accommodation", "Hostel", "Apartment", "House"];
 
   return (
-    <div className="min-h-screen bg-gray-50 p-6">
+      <div className="min-h-screen bg-gray-50 p-6 pt-28">
       <h1 className="text-3xl font-bold text-center mb-8">🏠 Available Listings</h1>
 
       {/* Filter Bar */}
