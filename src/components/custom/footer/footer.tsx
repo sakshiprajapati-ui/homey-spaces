@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <>
       {/* Page content wrapper */}
-      <div className="pb-60"> {/* extra bottom padding so footer doesn't overlap */}
+      <div className="pb-3"> {/* extra bottom padding so footer doesn't overlap */}
         {/* Your main page content goes here */}
       </div>
 

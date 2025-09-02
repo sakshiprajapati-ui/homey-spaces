@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Users, Building2, Home, Sparkles, Linkedin, Twitter } from "lucide-react";
 
+
 export default function AboutPage() {
   const team = [
     {
@@ -39,7 +40,7 @@ export default function AboutPage() {
 
   return (
     <div className="relative min-h-[100dvh] bg-gradient-to-b from-white to-slate-50 text-slate-800">
-      <section className="mx-auto max-w-6xl px-4 py-16 sm:py-24">
+      <section className="mx-auto max-w-6xl px-4 py-20 mt-10 sm:py-24">
         {/* Hero Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
