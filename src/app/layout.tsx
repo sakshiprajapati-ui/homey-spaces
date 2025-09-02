@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/custom/header/header";
@@ -20,19 +21,15 @@ export const metadata: Metadata = {
   description: "get rental houses",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      ><Header/>
+      <body className="min-h-screen bg-gradient-to-r from-[#4e54c8] to-[#8f94fb] text-white">
+        <Header/>
         {children}
         <Footer/>
       </body>
     </html>
-  );
+  )
 }
